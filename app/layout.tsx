@@ -8,11 +8,28 @@ import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
+const siteUrl = "https://personal-portfolio-pi-seven-22.vercel.app"
+const siteTitle = "Muhammad Aamir Yameen - Senior Software Engineer"
+const siteDescription =
+  "Senior Software Engineer with more than 7 years of experience building high-performance web and mobile applications. Specializing in React Native, Flutter, React, Next.js, AI agents & automation, and AI-powered solutions."
+
 export const metadata: Metadata = {
-  title: "Muhammad Aamir Yameen - Senior Software Engineer",
-  description:
-    "Senior Software Engineer with more than 7 years of experience building high-performance web and mobile applications. Specializing in React Native, Flutter, React, Next.js, AI agents & automation, and AI-powered solutions.",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
   generator: "v0.app",
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    title: siteTitle,
+    description: siteDescription,
+    siteName: "Muhammad Aamir Yameen",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+  },
 }
 
 export default function RootLayout({
